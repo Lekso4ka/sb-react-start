@@ -21,6 +21,7 @@ export default () => {
     }, [])
     return <>
         <BrowserRouter>
+            <h1>Мои любимые посты</h1>
             <Routes>
                 <Route path="/" element={<div className="wrap">{posts[0].map(p => <div className="post" key={p._id}>{p.title}</div>)}</div>}/>
                 {posts.map((p, i) => <Route path={"/"+(i+1)} element={<div className="wrap">{p.map(post => <div className="post" key={post._id}>{post.title}</div>)}</div>}/>)}
